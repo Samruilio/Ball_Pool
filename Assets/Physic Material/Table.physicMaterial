@@ -6,11 +6,11 @@ PhysicMaterial:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Table
-  dynamicFriction: .5
-  staticFriction: .5
-  bounciness: .600000024
-  frictionCombine: 0
-  bounceCombine: 0
+  dynamicFriction: 1
+  staticFriction: 1
+  bounciness: .899999976
+  frictionCombine: 1
+  bounceCombine: 3
   frictionDirection2: {x: 0, y: 0, z: 0}
   dynamicFriction2: 0
   staticFriction2: 0

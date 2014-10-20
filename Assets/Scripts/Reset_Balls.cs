@@ -9,7 +9,6 @@ public class Reset_Balls : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		reset ();
-		hit ();
 	}
 	
 	// Update is called once per frame
@@ -46,9 +45,10 @@ public class Reset_Balls : MonoBehaviour {
 		ballArray[12].transform.position = new Vector3 (start.x + 4 * 1.732f * radius, y + radius, start.z);
 		ballArray[13].transform.position = new Vector3 (start.x + 4 * 1.732f * radius, y + radius, start.z + 2 * radius);
 		ballArray[14].transform.position = new Vector3 (start.x + 4 * 1.732f * radius, y + radius, start.z + 4 * radius);
-	}
 
-	void hit() {
-		cueBall.rigidbody.AddForceAtPosition (new Vector3 (1000, 0, 0), new Vector3 (0, 0, 1.4f));
+		for(int i = 0; i < 15; i++){
+			ballArray[i].rigidbody.sleepVelocity = 0.25f;
+			ballArray[i].rigidbody.sleepAngularVelocity = 0.25f;
+		}
 	}
 }
